@@ -42,8 +42,11 @@ public class MoveOmSwipe : MonoBehaviour
             {
                 fingerDown = touch.position;
                 checkSwipe();
+                
             }
+    
         }
+    
     }
 
     void checkSwipe()
@@ -69,5 +72,12 @@ public class MoveOmSwipe : MonoBehaviour
         transform.position = new Vector3(x: transform.position.x + move_vect.x,
                                          y: transform.position.y + move_vect.y,
                                          z: transform.position.z);
+    }
+    void OnCollisionStay(Collision collision)
+    {
+        move_vect = new Vector3(x: -move_vect.x,
+                                    y: -move_vect.y,
+                                    z: 0);
+        Debug.Log("Enter");
     }
 }
