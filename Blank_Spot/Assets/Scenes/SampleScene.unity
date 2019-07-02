@@ -537,9 +537,9 @@ GameObject:
   m_Component:
   - component: {fileID: 747562619}
   - component: {fileID: 747562618}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Thief
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -699,14 +699,28 @@ GameObject:
   m_Component:
   - component: {fileID: 1041722955}
   - component: {fileID: 1041722954}
+  - component: {fileID: 1041722956}
   - component: {fileID: 1041722953}
-  m_Layer: 0
+  - component: {fileID: 1041722952}
+  m_Layer: 9
   m_Name: Guard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1041722952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1041722951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7deccc99d8ba3347a34395a5a0a52f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1041722953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -719,14 +733,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fe521a083e5f5b40a4b0615e6dc726b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewRadius: 10
+  viewRadius: 10000
   viewAngle: 90
   obstacleMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 256
   playerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 512
   visiblePlayer: []
 --- !u!212 &1041722954
 SpriteRenderer:
@@ -786,12 +800,33 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1041722951}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.04, y: 7.05, z: 0}
+  m_LocalPosition: {x: 0.67, y: 2.41, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &1041722956
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1041722951}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1069240234
 GameObject:
   m_ObjectHideFlags: 0

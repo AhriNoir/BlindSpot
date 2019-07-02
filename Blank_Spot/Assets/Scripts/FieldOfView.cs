@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class FieldOfView : MonoBehaviour
 {
-    [SerializeField] float viewRadius = 10;
+    [SerializeField] float viewRadius = 1000;
     [SerializeField] float viewAngle = 90;
     Collider2D[] playerInRadius;
     [SerializeField] LayerMask obstacleMask, playerMask;
@@ -19,6 +19,8 @@ public class FieldOfView : MonoBehaviour
     void FindVisiblePlayer()
     {
         playerInRadius = Physics2D.OverlapCircleAll(transform.position, viewRadius);
+
+        Debug.Log(playerInRadius.Length);
 
         visiblePlayer.Clear();
 
