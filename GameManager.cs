@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
 		if (gameHasEnded == false) {
 			gameHasEnded = true;
 			Debug.Log("GAME OVER");
-			FindObjectOfType<EndScreen>().Death();
+			FindObjectOfType<EndScr>().Death();
 
 		}
 	}

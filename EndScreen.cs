@@ -7,7 +7,7 @@ public class EndScreen : MonoBehaviour {
 
 	public void Death()
 	{
-		transform.position = new Vector3(x: 0, y: 0, z: transform.position.z);
+		
 	
 	}
 }

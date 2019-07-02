@@ -7,7 +7,7 @@ public class Collision : MonoBehaviour {
 	// Use this for initialization
 	void OnTriggerEnter2D(Collider2D collisionInfo) {
 		if (collisionInfo.gameObject.tag == "Player") {
-			FindObjectOfType<GameManager>().EndGame();
+			FindObjectOfType<EndScr>().Death();
 		}
 	}
 }
